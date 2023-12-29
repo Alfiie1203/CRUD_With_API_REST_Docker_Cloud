@@ -1,0 +1,41 @@
+version: '3'
+services:
+  database:
+    container_name: mydatabase
+    build:
+      context: ./database/
+      dockerfile: Dockerfile
+    networks:
+      myapp-network:
+          ipv4_address: 10.0.0.2
+
+  back:
+    container_name: backEnd
+    build:
+      context: ./BackPython/
+      dockerfile: Dockerfile
+    ports:
+      - "8000:5000"
+    depends_on:
+      - database
+    restart: unless-stopped
+    networks:
+      myapp-network:
+        ipv4_address: 10.0.0.3
+      myapp-external:
+        ipv4_address: 10.0.1.3
+
+
+networks:
+  myapp-external:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.1.0/24
+          gateway: 10.0.1.1
+  myapp-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.0.0/24
+          gateway: 10.0.0.1

@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Configura la conexión a la base de datos MySQL
 db_config = {
-    'host': 'mysql',  # Definido en el docker-compose en la sección posterior
+    'host': 'mydatabase',  # Definido en el docker-compose en la sección posterior
     'user': 'root',
     'password': 'password',
     'database': 'mydatabase'
