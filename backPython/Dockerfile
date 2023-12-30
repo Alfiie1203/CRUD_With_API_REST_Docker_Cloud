@@ -8,6 +8,7 @@ WORKDIR /app
 # Instalamos las dependencias de la aplicacion
 # En este caso, solo necesitaremos Flask y el conector a MySQL.
 RUN pip install Flask mysql-connector-python
+RUN pip install flask-cors
 # Copiamos el codigo fuente de la aplicacion al contenedor
 # Esto incluye tanto el archivo app.py como formulario.html
 COPY back.py app/
