@@ -1,0 +1,37 @@
+<div>
+  <h2>Lista de Ventas</h2>
+  <button (click)="mostrarPopup()">Nueva Venta</button>
+  <table>
+    <thead>
+      <tr>
+        <th>ID Cliente</th>
+        <th>ID Producto</th>
+        <th>ID Vendedor</th>
+        <th>Cantidad</th>
+        <th>Fecha Venta</th>        
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let venta of ventas">
+        <td>{{ venta.id_cliente }}</td>
+        <td>{{ venta.id_producto }}</td>
+        <td>{{ venta.id_vendedor }}</td>
+        <td>{{ venta.cantidad }}</td>
+        <td>{{ venta.fecha_venta }}</td>
+        <td>
+            <button (click)="eliminarVenta(venta.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- Agrega el componente de venta como un popup -->
+<div *ngIf="mostrarPopupFlag" class="popup-overlay">
+    <div class="popup-container">
+      <button class="popup-close" (click)="cerrarPopup()">Cerrar</button>
+      <app-venta></app-venta>
+    </div>
+  </div>

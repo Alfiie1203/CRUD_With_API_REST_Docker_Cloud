@@ -16,6 +16,7 @@ export class VentaComponent {
       response => {
         console.log('Venta creada exitosamente', response);
         // Puedes realizar otras acciones después de la creación exitosa
+        window.location.reload();
       },
       error => {
         console.error('Error al crear la venta', error);

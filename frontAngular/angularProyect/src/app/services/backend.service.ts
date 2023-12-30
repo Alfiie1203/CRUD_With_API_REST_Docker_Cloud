@@ -11,7 +11,7 @@ export class BackendService {
   constructor(private http: HttpClient) {}
 
   getVentas(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.baseUrl}/ventas`);
+    return this.http.get<any[]>(this.baseUrl+'/ventas');
   }
 
   getVenta(ventaId: number): Observable<any> {
