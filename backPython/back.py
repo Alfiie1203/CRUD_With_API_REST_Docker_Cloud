@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import logging as log
 import mysql.connector
 
 log.basicConfig(level=log.INFO)
 app = Flask(__name__)
+CORS(app)
 
 # Configura la conexión a la base de datos MySQL
 db_config = {
