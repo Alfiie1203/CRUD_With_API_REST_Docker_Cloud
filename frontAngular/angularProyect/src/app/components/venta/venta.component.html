@@ -1,0 +1,14 @@
+<div>
+    <h2>Crear Nueva Venta</h2>
+    <form (submit)="createVenta()">
+      <!-- Agrega campos de formulario según tus necesidades -->
+      <label>Id Cliente: <input [(ngModel)]="ventaData.id_cliente" name="id_cliente" type="number" required></label><br>
+      <label>Id Producto: <input [(ngModel)]="ventaData.id_producto" name="id_producto" type="number" required></label><br>
+      <label>Id Vendedor: <input [(ngModel)]="ventaData.id_vendedor" name="id_vendedor" type="number" required></label><br>
+      <label>Cantidad: <input [(ngModel)]="ventaData.cantidad" name="cantidad" type="number" required></label><br>
+      <label>Fecha Venta: <input [(ngModel)]="ventaData.fecha_venta" name="fecha_venta" type="text" required></label><br>
+  
+      <button type="submit">Crear Venta</button>
+    </form>
+</div>
+  
