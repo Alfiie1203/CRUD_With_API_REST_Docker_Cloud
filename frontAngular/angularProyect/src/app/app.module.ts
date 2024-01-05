@@ -7,13 +7,15 @@ import { VentaComponent } from './components/venta/venta.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListarComponent } from './components/listar/listar.component';
 import { NavComponent } from './components/nav/nav.component';
+import { UpdateventaComponent } from './components/updateventa/updateventa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VentaComponent,
     ListarComponent,
-    NavComponent
+    NavComponent,
+    UpdateventaComponent
   ],
   imports: [
     BrowserModule,

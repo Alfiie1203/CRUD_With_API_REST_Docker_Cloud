@@ -1,0 +1,12 @@
+<div>
+    <h2>Actualizar Venta</h2>
+    <form (submit)="updateVenta()">
+      <label>Id Cliente: <input [(ngModel)]="ventaData.id_cliente" name="id_cliente" type="number" required></label><br>
+      <label>Id Producto: <input [(ngModel)]="ventaData.id_producto" name="id_producto" type="number" required></label><br>
+      <label>Id Vendedor: <input [(ngModel)]="ventaData.id_vendedor" name="id_vendedor" type="number" required></label><br>
+      <label>Cantidad: <input [(ngModel)]="ventaData.cantidad" name="cantidad" type="number" required></label><br>
+      <label>Fecha Venta: <input [(ngModel)]="ventaData.fecha_venta" name="fecha_venta" type="text" required></label><br>
+  
+      <button type="submit">Actualizar Venta</button>
+    </form>
+  </div>
