@@ -24,9 +24,11 @@ app/
 ## Base de Datos
 
 ### Descripción:
+
 La base de datos MySQL almacena información sobre clientes, productos, vendedores y ventas. La estructura se define en el archivo `database.sql`, y la inicialización se realiza a través del Dockerfile.
 
 ### Configuración Docker:
+
 - Imagen: `mysql:latest`
 - Variables de Entorno:
   - `MYSQL_DATABASE=mydatabase`
@@ -38,9 +40,11 @@ La base de datos MySQL almacena información sobre clientes, productos, vendedor
 ## Backend (Python Flask)
 
 ### Descripción:
+
 El backend, desarrollado en Python con Flask, proporciona servicios API RESTful para realizar operaciones CRUD en la base de datos. Se encuentra en la carpeta `BackPython`.
 
 ### Configuración Docker:
+
 - Imagen: `python:latest`
 - Dependencias: Flask, mysql-connector-python, flask-cors
 - Puerto Externo: `5000`
@@ -48,9 +52,11 @@ El backend, desarrollado en Python con Flask, proporciona servicios API RESTful 
 ## Frontend (Angular)
 
 ### Descripción:
+
 El frontend, desarrollado en Angular, consume los servicios del backend y presenta la interfaz de usuario para interactuar con el sistema. Se encuentra en la carpeta `FrontAngular/angularProyect`.
 
 ### Configuración Docker:
+
 - Imagen: `nginx:latest`
 - Puerto Externo: `80`
 
@@ -60,7 +66,7 @@ El archivo `docker-compose.yml` orquesta la ejecución de los tres servicios (ba
 
 ## Instrucciones de Ejecución
 
-1. Clonar el repositorio: `git clone <URL_REPO>`
+1. Clonar el repositorio: `git clone https://github.com/Alfiie1203/CRUD_Docker_Cloud.git`
 2. Navegar al directorio del proyecto: `cd app`
 3. Ejecutar: `docker-compose up -d`
 4. Acceder al frontend en [http://localhost](http://localhost)
