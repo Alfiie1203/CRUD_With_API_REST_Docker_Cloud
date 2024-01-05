@@ -41,24 +41,36 @@ CREATE TABLE IF NOT EXISTS ventas (
     FOREIGN KEY (id_vendedor) REFERENCES vendedores(id_vendedor)
 );
 
--- Insertar algunos registros de ejemplo
-
--- Clientes
 INSERT INTO clientes (nombre, email, telefono, direccion) VALUES
-('Cliente1', 'cliente1@example.com', '123456789', 'Direccion Cliente 1'),
-('Cliente2', 'cliente2@example.com', '987654321', 'Direccion Cliente 2');
+('Juan Pérez', 'juan.perez@email.com', '555-1234', 'Av. Principal 123'),
+('María Rodríguez', 'maria.rodriguez@email.com', '555-5678', 'Calle Secundaria 456'),
+('Abelardo Leon', 'abelardo.leon@email.com', '555-5778', 'Calle Secundaria 456'),
+('Luis Leon', 'luis.leon@email.com', '555-5778', 'Calle Secundaria 456'),
+('Vicente Leon', 'vicente.leon@email.com', '555-5778', 'Calle Secundaria 456'),
+('Amen Leon', 'amen.leon@email.com', '555-5778', 'Calle Secundaria 456'),
+('Manuel Leon', 'manuel.leon@email.com', '555-5778', 'Calle Secundaria 456'),
+('Antonio Leon', 'antonio.leon@email.com', '555-5778', 'Calle Secundaria 456'),
+('Paola Leon', 'paola.leon@email.com', '555-5778', 'Calle Secundaria 456'),
+('Cristina Leon', 'cristina.leon@email.com', '555-5778', 'Calle Secundaria 456');
 
--- Productos
 INSERT INTO productos (nombre, precio, stock) VALUES
-('Producto1', 19.99, 50),
-('Producto2', 29.99, 30);
+('Laptop HP', 899.99, 10),
+('Smartphone Samsung', 599.99, 15),
+('Laptop Dell', 899.99, 12),
+('Tablet Apple', 499.99, 20),
+('Smartwatch Fitbit', 129.99, 8);
 
--- Vendedores
 INSERT INTO vendedores (nombre, email, telefono, direccion) VALUES
-('Vendedor1', 'vendedor1@example.com', '111222333', 'Direccion Vendedor 1'),
-('Vendedor2', 'vendedor2@example.com', '444555666', 'Direccion Vendedor 2');
+('Pedro Gómez', 'pedro.gomez@email.com', '555-9876', 'Ruta 7, Km 89'),
+('Ana Martínez', 'ana.martinez@email.com', '555-4321', 'Avenida Central 789');
 
--- Ventas
 INSERT INTO ventas (id_cliente, id_producto, id_vendedor, cantidad, fecha_venta) VALUES
-(1, 1, 1, 5, '2023-01-01'),
-(2, 2, 2, 3, '2023-01-02');
+(1, 1, 1, 3, '2023-01-05'),
+(2, 2, 2, 4, '2023-01-05'),
+(3, 3, 1, 10, '2023-01-05'),
+(4, 4, 2, 6, '2023-01-05'),
+(5, 5, 1, 7, '2023-01-05'),
+(6, 1, 2, 9, '2023-01-05'),
+(7, 2, 1, 2, '2023-01-05'),
+(8, 3, 2, 1, '2023-01-05'),
+(9, 4, 1, 4, '2023-01-06');
