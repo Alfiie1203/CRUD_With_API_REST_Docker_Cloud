@@ -4,6 +4,7 @@ import { VentaComponent } from './components/venta/venta.component';
 import { ListarComponent } from './components/listar/listar.component';
 
 const routes: Routes = [
+  {path: '', component: VentaComponent},
   {path: 'nuevaventa', component: VentaComponent},
   
   {path: 'listar', component: ListarComponent},
