@@ -70,7 +70,7 @@ El archivo `docker-compose.yml` orquesta la ejecución de los tres servicios (ba
 2. Navegar al directorio del proyecto: `cd app`
 3. Ejecutar: `docker-compose up`
 4. Acceder al frontend en [http://localhost](http://localhost)
-5. Acceder al backend en [http://localhost:8000/ventas](http://localhost:8000)
+5. Acceder al backend en [http://localhost:8000/ventas](http://localhost:8000/ventas)
 
 ## Colaboración y Gestión de Versiones
 
